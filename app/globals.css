@@ -1,0 +1,336 @@
+/* Genel Stiller */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f4f8; /* Arka plan rengi değiştirildi */
+  color: #2c3e50; /* Metin rengi değiştirildi */
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.login-sign-content {
+  margin: 0 auto;
+  width: 400px; /* Genişlik biraz artırıldı */
+  padding: 100px 30px 50px 30px; /* Padding azaltıldı */
+
+  h1 {
+    font-weight: bold;
+    font-size: 28px; /* Boyut küçültüldü */
+    margin-bottom: 15px;
+    color: #2980b9; /* Başlık rengi değiştirildi */
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 16px; /* Boyut küçültüldü */
+    color: #34495e; /* Metin rengi değiştirildi */
+    margin-bottom: 30px; /* Margin azaltıldı */
+  }
+
+  a {
+    width: 100%; /* Genişlik %100 yapıldı */
+    padding: 15px;
+    margin: 0 auto;
+    text-decoration: none;
+    margin-bottom: 15px;
+    border-radius: 25px; /* Kenar yuvarlaklığı artırıldı */
+    font-weight: bold; /* Font kalınlaştırıldı */
+  }
+}
+
+.LSbuttons {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.LSbuttons a:nth-child(1) {
+  background-color: #2980b9; /* Ana renk */
+  color: #fff;
+}
+
+.LSbuttons a:nth-child(2) {
+  background-color: #ecf0f1; /* Daha açık bir arka plan rengi */
+  color: #2980b9;
+  border: 2px solid #2980b9; /* Sınır rengi değiştirildi */
+}
+
+.LoginContent, .SignupContent {
+  margin: 0 auto;
+  width: 400px; /* Genişlik artırıldı */
+  padding: 100px 30px 50px 30px;
+
+  input {
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 25px; /* Kenar yuvarlaklığı artırıldı */
+    border: 2px solid #bdc3c7;
+    transition: border-color 0.3s ease; /* Animasyon eklendi */
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 16px;
+    color: #34495e;
+    margin-bottom: 30px;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 25px;
+    font-weight: bold; /* Font kalınlaştırıldı */
+  }
+}
+
+.LSbuttons button:nth-child(1) {
+  background-color: #2980b9; /* Ana renk */
+  color: #fff;
+}
+
+.admin-dashboard {
+  margin: 0 auto;
+  width: 1440px;
+  padding: 50px 60px;
+}
+
+/* Başlık ve Butonlar */
+h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem; /* Boyut küçültüldü */
+  font-weight: bold;
+  color: #2980b9; /* Başlık rengi değiştirildi */
+  margin-bottom: 20px; /* Margin azaltıldı */
+}
+
+h1 button {
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+h1 button:hover {
+  background-color: #21618c; /* Daha koyu ton */
+  transform: translateY(-3px);
+}
+
+/* Öğrenci Tablosu */
+.studentTable {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.studentTableTitles {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr) 10%;
+  background-color: #2980b9; /* Tablo başlık rengi değiştirildi */
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.tableForm {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.studentTableCol {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.studentTableCol:nth-child(odd) {
+  background-color: #f7f9fa; /* Daha açık gri */
+}
+
+.studentTableCol:hover {
+  background-color: #eef1f5; /* Hover rengi değiştirildi */
+}
+
+.studentTableCol input {
+  padding: 8px;
+  border: 2px solid #dcdcdc;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  width: 100%;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.studentTableCol input:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
+  outline: none;
+}
+
+/* İşlem Butonları */
+.studentTableCol button {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delBtn {
+  background-color: #e74c3c; /* Kırmızı */
+  color: #fff;
+}
+
+.delBtn:hover {
+  background-color: #c0392b; /* Daha koyu kırmızı */
+}
+
+.saveBtn {
+  background-color: #27ae60; /* Yeşil */
+  color: #fff;
+}
+
+.saveBtn:hover {
+  background-color: #219653; /* Daha koyu yeşil */
+}
+
+/* Modal Stili */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Daha koyu arka plan */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Daha belirgin gölge */
+  width: 400px;
+  max-width: 100%;
+}
+
+.modal h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2980b9; /* Başlık rengi değiştirildi */
+}
+
+.addStudent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.addStudent input {
+  padding: 12px;
+  border: 2px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.addStudent input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  outline: none;
+}
+
+.addStudent button {
+  padding: 10px 20px;
+  background-color: #2980b9; /* Ana renk */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.addStudent button:hover {
+  background-color: #21618c; /* Daha koyu ton */
+  transform: translateY(-2px);
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cikis {
+  padding: 5px 10px;
+  background-color: #2980b9; /* Ana renk */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cikis:hover {
+  background-color: #21618c; /* Daha koyu ton */
+  transform: translateY(-2px);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .studentTableCol {
+    grid-template-columns: repeat(3, 1fr) 5%;
+    font-size: 0.9rem;
+  }
+
+  .studentTableTitles {
+    grid-template-columns: repeat(3, 1fr) 5%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .modal {
+    width: 90%;
+  }
+}
